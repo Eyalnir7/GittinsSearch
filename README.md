@@ -1,4 +1,7 @@
-* Clone this repo and submodules
+Clone this repo and submodules
+  ```
+  git clone --recurse-submodules https://github.com/Eyalnir7/GittinsSearch.git
+  ```
 
 Set the `PROJECT_ROOT` environment variable to point to this repository:
 
