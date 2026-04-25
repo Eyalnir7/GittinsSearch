@@ -1,0 +1,4 @@
+(pick obj3 tray2 l_gripper)
+(place obj3 l_gripper table)
+(pick obj2 table l_gripper)
+(place obj2 l_gripper tray2)

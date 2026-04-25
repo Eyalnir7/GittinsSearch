@@ -1,0 +1,25 @@
+fol: <../fol/pnp-byTouch.fol>
+terminal: "(poseEq goal obj)"
+
+genericCollisions: false
+
+LGP/waypoint_w0: 3
+LGP/waypoint_wP: 2
+
+coll: [
+agent obj
+_obs_wall_middle agent
+_obs_wall_middle_2 agent
+_obs_wall_middle3 agent
+_obs_right_bound agent
+_obs_left_bound agent
+_obs_bottom_bound agent
+_obs_top_bound agent
+_obs_wall_middle obj
+_obs_wall_middle_2 obj
+_obs_wall_middle3 obj
+_obs_right_bound obj
+_obs_left_bound obj
+_obs_bottom_bound obj
+_obs_top_bound obj
+]

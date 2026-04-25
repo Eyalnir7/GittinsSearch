@@ -1,0 +1,21 @@
+fol: <../fol/pnp-capsuleTouch.fol>
+terminal: "(poseEq goal obj)"
+
+genericCollisions: true
+
+LGP/waypoint_w0: 5
+LGP/waypoint_wP: 2
+#LGP/verbose: 2
+#LGP/rrtStopEvals: 5000
+LGP/rrtStepsize: .05
+LGP/rrtTolerance: .001
+LGP/pathStepsPerPhase: 50
+
+coll: [
+_obs_1 obj
+_obs_2 obj
+_obs_3 obj
+_obs_4 obj
+_obs_5 obj
+_obs_6 obj
+]

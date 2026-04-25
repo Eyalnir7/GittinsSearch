@@ -1,0 +1,5 @@
+{ [touch ego obj1] [stable_ ego obj1] }
+{ [stableOn_ floor obj1] }
+{ [touch ego obj] [stable_ ego obj] }
+{ [stableOn_ goal obj] }
+{ [end] }

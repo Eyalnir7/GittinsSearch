@@ -1,0 +1,12 @@
+fol: <../fol/pnp-byTouch.fol>
+terminal: "(on tray obj0) (on tray obj1) (on tray obj2)"
+
+genericCollisions: true
+
+LGP/waypoint_w0: 2
+LGP/waypoint_wP: 2
+#LGP/verbose: 2
+
+coll: [obj0 obj1
+obj0 obj2
+obj1 obj2]

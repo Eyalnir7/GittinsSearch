@@ -1,0 +1,101 @@
+util.cpp:initCmdLine:678(1) ** cmd line arguments: './x.exe '
+SYSTEM CMD: mkdir -p z.190515-145250/
+SYSTEM CMD: rm -Rf z.190515-145250/vid  &&  rm -f z.190515-145250/*
+INITIAL LOGIC STATE = {(initial table1):True,
+(table table2):True,
+(initial table2):True,
+(initial table3):True,
+(object obj0):True,
+(initial obj0):True,
+(object obj1):True,
+(initial obj1):True,
+(object obj2):True,
+(initial obj2):True,
+(object obj3):True,
+(initial obj3):True,
+(table tray):True,
+(initial tray):True,
+(gripper pr2R):True,
+(initial pr2R):True,
+(gripper pr2L):True,
+(initial pr2L):True,
+(partOf table2 tray):True,
+(on table1 obj0):True,
+(on table1 obj1):True,
+(on table1 obj2):True,
+(on table1 obj3):True}
+decision sequence:TMP:{(pick pr2R obj0):True, (place pr2R obj0 tray):True}
+########## OPTIM lev 3
+SKELETON:
+  initial (table1) from 0 to -2
+  initial (table2) from 0 to -2
+  initial (table3) from 0 to -2
+  initial (obj0) from 0 to -2
+  initial (obj1) from 0 to -2
+  initial (obj2) from 0 to -2
+  initial (obj3) from 0 to -2
+  initial (tray) from 0 to -2
+  initial (pr2R) from 0 to -2
+  initial (pr2L) from 0 to -2
+  touch (pr2R obj0) from 1 to 1
+  stable (pr2R obj0) from 1 to 1
+  above (obj0 tray) from 2 to -2
+  stableOn (tray obj0) from 2 to -2
+  touch (pr2R obj0) from 2 to -2
+SWITCHES:
+  START  -->  stable (pr2R obj0) from 1 to 1
+  stable (pr2R obj0) from 1 to 1  -->  stableOn (tray obj0) from 2 to -2
+** WARNING:komo.cpp:getProblemGraph:2107(-1) not implemented for switches yet
+KOMO Problem:
+  x-dim:713  dual-dim:0
+  T:25 k:2 phases:2.5 stepsPerPhase:10 tau:1
+  #configurations:27 q-dims: (0..10)25 (11..20)32 (21..26)28
+    times: 1 2 3 4 5 6 7 8 9 10 
+  usingSwift:0
+    TASK 'QuaternionNorms'(0..24)1  type=eq  order=0  target=[  ]  scale= 10 
+    TASK 'qItself#46'(0..24)1  type=sos  order=2  target=[  ]  scale= 1 1 1 3000 0.1 1 1 1 0.1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 
+    TASK 'qItself#46'(0..24)1  type=sos  order=0  target=[  ]  scale= 0.01 
+    TASK 'ZeroQVel-obj0'(0..9)0 (10..18)1  type=eq  order=1  target=[  ]  scale= 10 
+    TASK 'LinAngVel-2-obj0'(0..8)0 (9..10)1  type=eq  order=2  target=[  ]  scale= 100 
+    TASK 'ZeroQVel-obj0'(0..19)0 (20..24)1  type=eq  order=1  target=[  ]  scale= 10 
+    TASK 'LinAngVel-2-obj0'(0..18)0 (19..20)1  type=eq  order=2  target=[  ]  scale= 100 
+    TASK 'PairCollision-pr2R-obj0'(0..8)0 (9..9)1  type=eq  order=0  target=[  ]  scale= 100 
+    TASK 'AboveBox:obj0:tray'(0..18)0 (19..24)1  type=ineq  order=0  target=[  ]  scale= 10 
+    TASK 'PairCollision-pr2R-obj0'(0..18)0 (19..24)1  type=eq  order=0  target=[  ]  scale= 100 
+    SWITCH  timeOfApplication=9  symbol=SW_effJoint  jointType=free  fromId=125  toId=5
+    SWITCH  timeOfApplication=19  symbol=SW_effJoint  jointType=transXYPhi  fromId=9  toId=5
+***** optConstrained: method=AugmentedLagrangian
+** optConstr. it=0l mu=1 nu=1 muLB=0
+** optConstr. it=0l 22 f(x)=0.202371 	g_compl=0.00838322 	h_compl=0.195338 	|x-x'|=1.92164
+** optConstr. it=1l mu=2 nu=2 muLB=0
+** optConstr. it=1l 27 f(x)=0.183913 	g_compl=5.3746e-05 	h_compl=0.0191786 	|x-x'|=0.117958
+** optConstr. it=2l mu=4 nu=4 muLB=0
+** optConstr. it=2l 28 f(x)=0.181282 	g_compl=3.78751e-07 	h_compl=0.0108056 	|x-x'|=0.0189882
+** optConstr. it=3l mu=8 nu=8 muLB=0
+** optConstr. it=3l 29 f(x)=0.178921 	g_compl=1.11352e-07 	h_compl=0.00900468 	|x-x'|=0.0176769
+** optConstr. it=4l mu=16 nu=16 muLB=0
+** optConstr. it=4l 30 f(x)=0.176809 	g_compl=9.6303e-10 	h_compl=0.00841942 	|x-x'|=0.0164542
+** optConstr. it=5l mu=32 nu=32 muLB=0
+** optConstr. it=5l 31 f(x)=0.174911 	g_compl=0 	h_compl=0.00792244 	|x-x'|=0.0153149
+** optConstr. it=6l mu=64 nu=64 muLB=0
+** optConstr. it=6l 32 f(x)=0.173199 	g_compl=0 	h_compl=0.00603594 	|x-x'|=0.0142525
+** optConstr. it=7l mu=128 nu=128 muLB=0
+** optConstr. it=7l 33 f(x)=0.171649 	g_compl=0 	h_compl=0.00598081 	|x-x'|=0.0132615
+** optConstr. it=8l mu=256 nu=256 muLB=0
+** optConstr. it=8l 34 f(x)=0.170238 	g_compl=0 	h_compl=0.00587642 	|x-x'|=0.0123368
+** optConstr. it=9l mu=512 nu=512 muLB=0
+** optConstr. it=9l 36 f(x)=0.169586 	g_compl=0 	h_compl=0.00430233 	|x-x'|=0.00573688
+** optConstr. StoppingCriterion Delta<0.01
+** optimization time=0.73 setJointStateCount=900
+{QuaternionNorms:{order:0, type:eq, sqrCosts:0, constraints:0.000270448},
+qItself#46:{order:2, type:sos, sqrCosts:0.165676, constraints:0},
+qItself#46:{order:0, type:sos, sqrCosts:0.00391012, constraints:0},
+ZeroQVel-obj0:{order:1, type:eq, sqrCosts:0, constraints:1.27604e-08},
+LinAngVel-2-obj0:{order:2, type:eq, sqrCosts:0, constraints:0.0011778},
+ZeroQVel-obj0:{order:1, type:eq, sqrCosts:0, constraints:1.44101e-09},
+LinAngVel-2-obj0:{order:2, type:eq, sqrCosts:0, constraints:0.00126215},
+PairCollision-pr2R-obj0:{order:0, type:eq, sqrCosts:0, constraints:4.83664e-05},
+AboveBox:obj0:tray:{order:0, type:ineq, sqrCosts:0, constraints:0},
+PairCollision-pr2R-obj0:{order:0, type:eq, sqrCosts:0, constraints:0.00154356},
+total sqrCosts:0.169586,
+total constraints:0.00430233}

@@ -1,0 +1,18 @@
+floor 	{ , shape:ssBox, size:[10, 10, 1, 0.01], contact:1 }
+stick1_goal (floor) 	{  Q:[0, 0.3, 0.6, -1, 0, 0, 0], joint:rigid, shape:ssBox, size:[0.75, 0.1, 0.1, 0.01] }
+stick2_goal (floor) 	{  Q:[0, -0.3, 0.6, -1, 0, 0, 0], joint:rigid, shape:ssBox, size:[0.75, 0.1, 0.1, 0.01] }
+stick3_goal (floor) 	{  Q:[0.3, 0, 0.7, -1, 0, 0, 0], joint:rigid, shape:ssBox, size:[0.1, 0.75, 0.1, 0.01] }
+stick4_goal (floor) 	{  Q:[-0.3, 0, 0.7, -1, 0, 0, 0], joint:rigid, shape:ssBox, size:[0.1, 0.75, 0.1, 0.01] }
+stick5_goal (floor) 	{  Q:[0, 0.3, 0.8, -1, 0, 0, 0], joint:rigid, shape:ssBox, size:[0.75, 0.1, 0.1, 0.01] }
+stick6_goal (floor) 	{  Q:[0, -0.3, 0.8, -1, 0, 0, 0], joint:rigid, shape:ssBox, size:[0.75, 0.1, 0.1, 0.01] }
+stick7_goal (floor) 	{  Q:[0.3, 0, 0.9, -1, 0, 0, 0], joint:rigid, shape:ssBox, size:[0.1, 0.75, 0.1, 0.01] }
+stick8_goal (floor) 	{  Q:[-0.3, 0, 0.9, -1, 0, 0, 0], joint:rigid, shape:ssBox, size:[0.1, 0.75, 0.1, 0.01] }
+stick1 (floor) 	{  Q:[0, 0.7, 0.6, -1, 0, 0, 0], joint:rigid, shape:ssBox, size:[0.75, 0.1, 0.1, 0.01], contact:1 }
+stick2 (floor) 	{  Q:[0, -0.5, 0.6, -1, 0, 0, 0], joint:rigid, shape:ssBox, size:[0.75, 0.1, 0.1, 0.01] }
+stick3 (floor) 	{  Q:[0.6, 0, 0.7, -1, 0, 0, 0], joint:rigid, shape:ssBox, size:[0.1, 0.75, 0.1, 0.01] }
+stick4 (floor) 	{  Q:[-0.8, 0, 0.7, -1, 0, 0, 0], joint:rigid, shape:ssBox, size:[0.1, 0.75, 0.1, 0.01] }
+stick5 (floor) 	{  Q:[0, 0.5, 0.8, -1, 0, 0, 0], joint:rigid, shape:ssBox, size:[0.75, 0.1, 0.1, 0.01] }
+stick6 (floor) 	{  Q:[0, -0.9, 0.8, -1, 0, 0, 0], joint:rigid, shape:ssBox, size:[0.75, 0.1, 0.1, 0.01] }
+stick7 (floor) 	{  Q:[0.5, 0, 0.9, -1, 0, 0, 0], joint:rigid, shape:ssBox, size:[0.1, 0.75, 0.1, 0.01] }
+stick8 (floor) 	{  Q:[-0.6, 0, 0.9, -1, 0, 0, 0], joint:rigid, shape:ssBox, size:[0.1, 0.75, 0.1, 0.01] }
+

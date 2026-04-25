@@ -1,0 +1,14 @@
+floor 	{ , shape:ssBox, size:[10, 10, 1, 0.01], contact:1 }
+gripper_l (floor) 	{  Q:[0, 0, 1, -1, 0, 0, 0], joint:rigid, shape:sphere, size:[1, 1, 1, 0.075], contact:1 }
+a_0 (gripper_l) 	{  Q:[0.172385, 0, 0, -1, 0, 0, 0], shape:ssBox, size:[0.344769, 0.1, 0.1, 0.01], contact:-1 }
+a_pre_joint_0 (a_0) 	{  Q:[0.172385, 0, 0, 0.417802, 0.903854, 0.0921049, -0.00241071] }
+a_joint_0 (a_pre_joint_0) 	{  Q:[0, 0, 0, -1, 0, 1.30104e-18, 5.42101e-18], joint:hingeZ, limits:[-3.14159, 3.14159] }
+a_1 (a_joint_0) 	{  Q:[0.244678, 0, 0, -1, 0, -2.60209e-18, -6.93889e-18], shape:ssBox, size:[0.489356, 0.1, 0.1, 0.01], contact:-1 }
+a_pre_joint_1 (a_1) 	{  Q:[0.244678, 0, 0, 0.838358, -0.0787432, 0.345001, -0.414644] }
+a_joint_1 (a_pre_joint_1) 	{  Q:[0, 0, 0, -1, 0, 1.38778e-17, 2.77556e-17], joint:hingeZ, limits:[-3.14159, 3.14159] }
+a_2 (a_joint_1) 	{  Q:[0.190098, 0, 0, -1, 0, 1.38778e-17, 2.77556e-17], shape:ssBox, size:[0.380196, 0.1, 0.1, 0.01], contact:-1 }
+a_pre_joint_2 (a_2) 	{  Q:[0.190098, 0, 0, -0.1913, -0.266168, -0.168806, -0.92955] }
+a_joint_2 (a_pre_joint_2) 	{  Q:[0, -0, 0, -1, 0, 0, 1.38778e-17], joint:hingeZ, limits:[-3.14159, 3.14159] }
+a_3 (a_joint_2) 	{  Q:[0.170118, 0, 0, -1, 0, 0, 1.38778e-17], shape:ssBox, size:[0.340237, 0.1, 0.1, 0.01], contact:-1 }
+gripper_r (a_3) 	{  Q:[0.170118, 0, 0, -1, 0, 0, 1.38778e-17], shape:sphere, size:[1, 1, 1, 0.075], contact:1 }
+

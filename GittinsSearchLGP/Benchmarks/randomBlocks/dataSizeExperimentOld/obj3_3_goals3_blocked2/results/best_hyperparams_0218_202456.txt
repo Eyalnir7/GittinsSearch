@@ -1,0 +1,6 @@
+Best average c_tot: 52.2225
+level_cP: 3
+skeleton_wP: 3
+waypoint_w0: 1
+skeleton_w0: 1
+waypoint_wP: 3

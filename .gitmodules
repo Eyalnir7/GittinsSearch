@@ -1,0 +1,11 @@
+[submodule "rai"]
+	path = rai
+	url = https://github.com/MarcToussaint/rai.git
+
+[submodule "rai-robotModels"]
+	path = rai-robotModels
+	url = https://github.com/MarcToussaint/rai-robotModels.git
+
+[submodule "23-lgp-benchmarks"]
+	path = lgp-benchmarks
+	url = https://github.com/MarcToussaint/23-lgp-benchmarks.git

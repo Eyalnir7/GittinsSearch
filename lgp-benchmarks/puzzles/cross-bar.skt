@@ -1,0 +1,4 @@
+{ [stableOn_, mover, obj] }
+{ [stableOn_, goal, obj] }
+{ [end] }
+

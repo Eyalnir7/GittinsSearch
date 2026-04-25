@@ -1,0 +1,2 @@
+export DIVERSE_FAST_DOWNWARD_PLANNER_PATH=$HOME/git/fd-red-black-postipc2018
+export DIVERSE_SCORE_COMPUTATION_PATH=$HOME/git/DiverseScore

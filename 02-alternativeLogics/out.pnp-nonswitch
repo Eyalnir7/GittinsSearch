@@ -1,0 +1,102 @@
+util.cpp:initCmdLine:678(1) ** cmd line arguments: './x.exe '
+SYSTEM CMD: mkdir -p z.190515-145548/
+SYSTEM CMD: rm -Rf z.190515-145548/vid  &&  rm -f z.190515-145548/*
+INITIAL LOGIC STATE = {(initial table1):True,
+(table table2):True,
+(initial table2):True,
+(initial table3):True,
+(object obj0):True,
+(initial obj0):True,
+(object obj1):True,
+(initial obj1):True,
+(object obj2):True,
+(initial obj2):True,
+(object obj3):True,
+(initial obj3):True,
+(table tray):True,
+(initial tray):True,
+(gripper pr2R):True,
+(initial pr2R):True,
+(gripper pr2L):True,
+(initial pr2L):True,
+(partOf table2 tray):True,
+(on table1 obj0):True,
+(on table1 obj1):True,
+(on table1 obj2):True,
+(on table1 obj3):True}
+decision sequence:TMP:{(pick pr2R obj0):True, (place pr2R obj0 tray):True}
+########## OPTIM lev 3
+SKELETON:
+  initial (table1) from 0 to -2
+  initial (table2) from 0 to -2
+  initial (table3) from 0 to -2
+  initial (obj0) from 0 to -2
+  initial (obj1) from 0 to -2
+  initial (obj2) from 0 to -2
+  initial (obj3) from 0 to -2
+  initial (tray) from 0 to -2
+  initial (pr2R) from 0 to -2
+  initial (pr2L) from 0 to -2
+  stableRelPose (table1 obj0) from 0 to 0
+  stableRelPose (table1 obj1) from 0 to -2
+  stableRelPose (table1 obj2) from 0 to -2
+  stableRelPose (table1 obj3) from 0 to -2
+  touch (pr2R obj0) from 1 to 1
+  makeFree (obj0) from 1 to -2
+  stableRelPose (pr2R obj0) from 1 to 1
+  above (obj0 tray) from 2 to -2
+  stableRelPose (tray obj0) from 2 to -2
+  touch (pr2R obj0) from 2 to -2
+KOMO Problem:
+  x-dim:800  dual-dim:0
+  T:25 k:2 phases:2.5 stepsPerPhase:10 tau:1
+  #configurations:27 q-dims: (0..26)32
+    times: 1 2 3 4 5 6 7 8 9 10 
+  usingSwift:0
+    TASK 'QuaternionNorms'(0..24)1  type=eq  order=0  target=[  ]  scale= 10 
+    TASK 'qItself#46'(0..24)1  type=sos  order=2  target=[  ]  scale= 1 1 1 3000 0.1 1 1 1 0.1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 
+    TASK 'qItself#46'(0..24)1  type=sos  order=0  target=[  ]  scale= 0.01 
+    TASK 'Default-1-pose-table1-obj0'(0..9)1  type=eq  order=1  target=[  ]  scale= 100 
+    TASK 'Default-1-pose-table1-obj1'(0..24)1  type=eq  order=1  target=[  ]  scale= 100 
+    TASK 'Default-1-pose-table1-obj2'(0..24)1  type=eq  order=1  target=[  ]  scale= 100 
+    TASK 'Default-1-pose-table1-obj3'(0..24)1  type=eq  order=1  target=[  ]  scale= 100 
+    TASK 'PairCollision-pr2R-obj0'(0..8)0 (9..9)1  type=eq  order=0  target=[  ]  scale= 100 
+    TASK 'Default-1-pose-pr2R-obj0'(0..8)0 (9..19)1  type=eq  order=1  target=[  ]  scale= 100 
+    TASK 'AboveBox:obj0:tray'(0..18)0 (19..24)1  type=ineq  order=0  target=[  ]  scale= 10 
+    TASK 'Default-1-pose-tray-obj0'(0..18)0 (19..24)1  type=eq  order=1  target=[  ]  scale= 100 
+    TASK 'PairCollision-pr2R-obj0'(0..18)0 (19..24)1  type=eq  order=0  target=[  ]  scale= 100 
+***** optConstrained: method=AugmentedLagrangian
+** optConstr. it=0l mu=1 nu=1 muLB=0
+** optConstr. it=0l 23 f(x)=0.183453 	g_compl=0.0117422 	h_compl=0.0966824 	|x-x'|=1.93137
+** optConstr. it=1l mu=2 nu=2 muLB=0
+** optConstr. it=1l 28 f(x)=0.153614 	g_compl=0 	h_compl=0.0156151 	|x-x'|=0.114448
+** optConstr. it=2l mu=4 nu=4 muLB=0
+** optConstr. it=2l 29 f(x)=0.1496 	g_compl=0 	h_compl=0.0160292 	|x-x'|=0.0197388
+** optConstr. it=3l mu=8 nu=8 muLB=0
+** optConstr. it=3l 30 f(x)=0.146013 	g_compl=0 	h_compl=0.0141228 	|x-x'|=0.018869
+** optConstr. it=4l mu=16 nu=16 muLB=0
+** optConstr. it=4l 31 f(x)=0.142788 	g_compl=0 	h_compl=0.0130025 	|x-x'|=0.0180559
+** optConstr. it=5l mu=32 nu=32 muLB=0
+** optConstr. it=5l 32 f(x)=0.139874 	g_compl=0 	h_compl=0.012202 	|x-x'|=0.0172959
+** optConstr. it=6l mu=64 nu=64 muLB=0
+** optConstr. it=6l 33 f(x)=0.137229 	g_compl=0 	h_compl=0.0116824 	|x-x'|=0.016582
+** optConstr. it=7l mu=128 nu=128 muLB=0
+** optConstr. it=7l 34 f(x)=0.134821 	g_compl=0 	h_compl=0.0114302 	|x-x'|=0.0159152
+** optConstr. it=8l mu=256 nu=256 muLB=0
+** optConstr. it=8l 36 f(x)=0.133707 	g_compl=0 	h_compl=0.00821314 	|x-x'|=0.00768443
+** optConstr. StoppingCriterion Delta<0.01
+** optimization time=1.56 setJointStateCount=900
+{QuaternionNorms:{order:0, type:eq, sqrCosts:0, constraints:0.00118339},
+qItself#46:{order:2, type:sos, sqrCosts:0.129753, constraints:0},
+qItself#46:{order:0, type:sos, sqrCosts:0.00395416, constraints:0},
+Default-1-pose-table1-obj0:{order:1, type:eq, sqrCosts:0, constraints:6.09656e-05},
+Default-1-pose-table1-obj1:{order:1, type:eq, sqrCosts:0, constraints:0},
+Default-1-pose-table1-obj2:{order:1, type:eq, sqrCosts:0, constraints:0},
+Default-1-pose-table1-obj3:{order:1, type:eq, sqrCosts:0, constraints:0},
+PairCollision-pr2R-obj0:{order:0, type:eq, sqrCosts:0, constraints:0.000171357},
+Default-1-pose-pr2R-obj0:{order:1, type:eq, sqrCosts:0, constraints:0.00605905},
+AboveBox:obj0:tray:{order:0, type:ineq, sqrCosts:0, constraints:0},
+Default-1-pose-tray-obj0:{order:1, type:eq, sqrCosts:0, constraints:8.24938e-09},
+PairCollision-pr2R-obj0:{order:0, type:eq, sqrCosts:0, constraints:0.000738361},
+total sqrCosts:0.133707,
+total constraints:0.00821314}

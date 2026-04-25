@@ -1,0 +1,6 @@
+numObjLowerBound: 3
+numObjUpperBound: 3
+numGoalsUpperBound: 3
+numBlockedGoalsUpperBound: 2
+numIterations: 100
+seed: 0

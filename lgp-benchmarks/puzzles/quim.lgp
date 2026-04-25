@@ -1,0 +1,31 @@
+fol: <../fol/pnp-byTouch.fol>
+terminal: "(on goal obj1) (on goal obj2)"
+
+genericCollisions: false
+
+LGP/waypoint_w0: 10
+LGP/waypoint_wP: 2
+
+coll: [
+agent obj1
+agent obj2
+obj1 obj2
+_obs_top agent
+_obs_side agent
+_left agent
+_right agent
+_bottom agent
+_top agent
+_obs_top obj1
+_obs_side obj1
+_left obj1
+_right obj1
+_bottom obj1
+_top obj1
+_obs_top obj2
+_obs_side obj2
+_left obj2
+_right obj2
+_bottom obj2
+_top obj2
+]

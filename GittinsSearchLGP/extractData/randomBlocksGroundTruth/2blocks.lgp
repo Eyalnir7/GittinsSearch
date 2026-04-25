@@ -1,0 +1,29 @@
+fol: <../pnp-byTouch-multiGoal.fol>
+terminal: "(on_goal obj2)"
+
+genericCollisions: false
+
+LGP/waypoint_w0: 1
+LGP/waypoint_wP: 3
+
+coll: [ego wall_right
+ego wall_left
+ego wall_front
+ego wall_back
+#obj1 wall_right
+#obj1 wall_left
+#obj1 wall_front
+#obj1 wall_back
+#obj1 obj2
+obj2 wall_right
+obj2 wall_left
+obj2 wall_front
+obj2 wall_back
+#ego obj1
+ego obj2
+ego blockWallFront
+ego blockWallBack
+ego blockWallCross
+obj2 blockWallBack
+obj2 blockWallFront
+]

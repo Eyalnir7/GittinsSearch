@@ -1,0 +1,33 @@
+    ./x.exe \
+    -mode run \
+    -numObjLowerBound 4 \
+    -numObjUpperBound 4 \
+    -numGoalsUpperBound 4 \
+    -numBlockedGoalsUpperBound 1 \
+    -dataPercentage 1.0\
+    -numIterations 100 \
+    -runSeed 0 \
+    -solver ELS \
+    -LGP/level_wP: 3. \
+    -LGP/level_cP: 3 \
+    -LGP/skeleton_wP: 3. \
+    -LGP/waypoint_w0: 1. \
+    -LGP/skeleton_w0: 1 \
+    -LGP/waypoint_wP: 3. \
+
+    ./x.exe \
+    -mode run \
+    -numObjLowerBound 3 \
+    -numObjUpperBound 3 \
+    -numGoalsUpperBound 3 \
+    -numBlockedGoalsUpperBound 2 \
+    -dataPercentage 1.0\
+    -numIterations 100 \
+    -runSeed 0 \
+    -solver ELS
+    -LGP/level_wP: 3. \
+    -LGP/level_cP: 3 \
+    -LGP/skeleton_wP: 3. \
+    -LGP/waypoint_w0: 1. \
+    -LGP/skeleton_w0: 1 \
+    -LGP/waypoint_wP: 3. \

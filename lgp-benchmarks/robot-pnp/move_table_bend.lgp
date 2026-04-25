@@ -1,0 +1,12 @@
+fol: <../fol/pnp-byTouch.fol>
+terminal: "(poseEq goal table)"
+
+genericCollisions: true
+
+LGP/waypoint_w0: 5
+LGP/waypoint_wP: 2
+#LGP/verbose: 2
+#LGP/rrtStopEvals: 5000
+LGP/rrtStepsize: .2
+
+#coll: [obj0 obj1 obj0 obj2 obj1 obj2]
