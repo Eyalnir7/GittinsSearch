@@ -3,10 +3,10 @@ Clone this repo and submodules
   git clone --recurse-submodules https://github.com/Eyalnir7/GittinsSearch.git
   ```
 
-Set the `PROJECT_ROOT` environment variable to point to this repository:
+Set the `PROJECT_ROOT` environment variable to point to this repository. Run this command from the root of the cloned repository:
 
 ```
-export PROJECT_ROOT="$(cd /path/to/lgp-pddl && pwd)"
+export PROJECT_ROOT="$(pwd)"
 ```
 
 You can add this to your `.bashrc` or `.zshrc` to make it persistent:
