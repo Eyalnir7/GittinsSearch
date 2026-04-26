@@ -1,3 +1,4 @@
+# Setup
 Clone this repo and submodules
   ```
   git clone --recurse-submodules https://github.com/Eyalnir7/GittinsSearch.git
@@ -11,45 +12,23 @@ export PROJECT_ROOT="$(pwd)"
 
 You can add this to your `.bashrc` or `.zshrc` to make it persistent:
 ```
-echo 'export PROJECT_ROOT="/path/to/lgp-pddl"' >> ~/.bashrc
+echo 'export PROJECT_ROOT="$(pwd)"' >> ~/.bashrc
 source ~/.bashrc
 ```
 
 This variable is used throughout the project in scripts and C++ code to reference data and model directories relative to the project root.
 
-
-* Compile this repo
+## Install Dependencies
 ```
-cd $HOME/git/lgp-pddl
-
 make -C rai -j1 printUbuntuAll    # for your information: what the next step will install
 make -C rai -j1 installUbuntuAll  # calls sudo apt-get install; you can always interrupt
 
-cd rai/test/LGP/pickAndPlace
-make -j $(command nproc)
-./x.exe
+wget https://github.com/MarcToussaint/rai/raw/refs/heads/marc/_make/install.sh; chmod a+x install.sh
+./install.sh ubuntu-rai
+./install.sh libccd
+./install.sh fcl
+./install.sh libann
 ```
-
-* Compile cmd line tools, if you like (including `lgpPlayer` and `kinEdit`)
-```
-cd $HOME/git/lgp-pddl
-
-make -C rai bin
-export PATH=".:$HOME/git/lgp-pddl/rai/bin:$PATH"
-```
-
-## local lib install
-
-      export MAKEFLAGS="-j $(command nproc --ignore 2)"
-      #apt update
-      #apt install wget
-
-      wget https://github.com/MarcToussaint/rai/raw/refs/heads/marc/_make/install.sh; chmod a+x install.sh
-      ./install.sh ubuntu-rai
-      ./install.sh libccd
-      ./install.sh fcl
-      ./install.sh libann
-      ./install.sh rai
 
 ## LibTorch
 
