@@ -1,6 +1,0 @@
-numObjLowerBound: 2
-numObjUpperBound: 2
-numGoalsUpperBound: 2
-numBlockedGoalsUpperBound: 2
-numIterations: 100
-seed: 0

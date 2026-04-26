@@ -8,18 +8,18 @@ wall_front(floor): { pose: [-5, 0, 0.2], shape: ssBox, size: [0.2, 10, 0.3, 0.04
 base(world): { pose: [0, 0, 0.1] }
 ego(base): { joint: transXY, limits: [-5, -5, 5, 5], shape: ssCylinder, size: [0.2, 0.2, 0.02], color: [0.96875, 0.742188, 0.308594], contact: 1, logical: { is_gripper: True }, sampleUniform: 1 }
 camera_init: { pose: [0, 0, 11, 0, 1, 0, 0], width: 1000, height: 1000, focalLength: 1, zRange: [0.5, 100] }
-objectA(floor): { pose: [3.63168, -0.653725, 0.2], joint: rigid, shape: ssBox, size: [0.3, 0.3, 0.3, 0.02], color: [0, 0, 1], contact: 1, logical: { is_object: True } }
-wallobjA_west(floor): { pose: [3.18168, -0.653725, 0.15], shape: ssBox, size: [0.15, 0.8, 0.3, 0.01], color: [0.7, 0.7, 0.7], contact: 1 }
-wallobjA_east(floor): { pose: [4.08168, -0.653725, 0.15], shape: ssBox, size: [0.15, 0.8, 0.3, 0.01], color: [0.7, 0.7, 0.7], contact: 1 }
-objectB(floor): { pose: [-3.29719, -1.15805, 0.2], joint: rigid, shape: ssBox, size: [0.3, 0.3, 0.3, 0.02], color: [0, 0, 1], contact: 1, logical: { is_object: True } }
-wallobjB_north(floor): { pose: [-3.29719, -0.708048, 0.15], shape: ssBox, size: [0.8, 0.15, 0.3, 0.01], color: [0.7, 0.7, 0.7], contact: 1 }
-wallobjB_east(floor): { pose: [-2.84719, -1.15805, 0.15], shape: ssBox, size: [0.15, 0.8, 0.3, 0.01], color: [0.7, 0.7, 0.7], contact: 1 }
-objectC(floor): { pose: [-2.84085, 2.71192, 0.2], joint: rigid, shape: ssBox, size: [0.3, 0.3, 0.3, 0.02], color: [0, 0, 1], contact: 1, logical: { is_object: True } }
-wallobjC_west(floor): { pose: [-3.29085, 2.71192, 0.15], shape: ssBox, size: [0.15, 0.8, 0.3, 0.01], color: [0.7, 0.7, 0.7], contact: 1 }
-wallobjC_north(floor): { pose: [-2.84085, 3.16192, 0.15], shape: ssBox, size: [0.8, 0.15, 0.3, 0.01], color: [0.7, 0.7, 0.7], contact: 1 }
-goalA(floor): { pose: [0.434967, -3.52613, 0], shape: ssBox, size: [0.5, 0.5, 0.1, 0.01], color: [1, 0.3, 0.3], logical: { is_goal: True, is_place: True } }
-wallgoalA_south(floor): { pose: [0.434967, -3.82613, 0.15], shape: ssBox, size: [0.8, 0.15, 0.3, 0.01], color: [0.7, 0.7, 0.7], contact: 1 }
-goalB(floor): { pose: [-1.82537, -2.53639, 0], shape: ssBox, size: [0.32, 0.32, 0.1, 0.01], color: [1, 0.3, 0.3], logical: { is_goal: True, is_place: True, busy: True } }
-wallobjB(goalB): { pose: [0, 0, 0.2], joint: rigid, shape: ssBox, size: [0.3, 0.3, 0.3, 0.02], color: [0.7, 0.7, 0.7], contact: 1, logical: { is_object: True, is_obstacle: True, on_goal: True, busy: True, on: True } }
-goalC(floor): { pose: [-3.64665, -3.44814, 0], shape: ssBox, size: [0.32, 0.32, 0.1, 0.01], color: [1, 0.3, 0.3], logical: { is_goal: True, is_place: True, busy: True } }
+objectA(floor): { pose: [-1.36443, 1.83326, 0.2], joint: rigid, shape: ssBox, size: [0.3, 0.3, 0.3, 0.02], color: [0, 0, 1], contact: 1, logical: { is_object: True } }
+wallobjA_north(floor): { pose: [-1.36443, 2.28326, 0.15], shape: ssBox, size: [0.8, 0.15, 0.3, 0.01], color: [0.7, 0.7, 0.7], contact: 1 }
+wallobjA_east(floor): { pose: [-0.914435, 1.83326, 0.15], shape: ssBox, size: [0.15, 0.8, 0.3, 0.01], color: [0.7, 0.7, 0.7], contact: 1 }
+objectB(floor): { pose: [3.17975, -1.90292, 0.2], joint: rigid, shape: ssBox, size: [0.3, 0.3, 0.3, 0.02], color: [0, 0, 1], contact: 1, logical: { is_object: True } }
+wallobjB_east(floor): { pose: [3.62975, -1.90292, 0.15], shape: ssBox, size: [0.15, 0.8, 0.3, 0.01], color: [0.7, 0.7, 0.7], contact: 1 }
+wallobjB_south(floor): { pose: [3.17975, -2.35292, 0.15], shape: ssBox, size: [0.8, 0.15, 0.3, 0.01], color: [0.7, 0.7, 0.7], contact: 1 }
+objectC(floor): { pose: [-0.613248, -2.67352, 0.2], joint: rigid, shape: ssBox, size: [0.3, 0.3, 0.3, 0.02], color: [0, 0, 1], contact: 1, logical: { is_object: True } }
+wallobjC_north(floor): { pose: [-0.613248, -2.22352, 0.15], shape: ssBox, size: [0.8, 0.15, 0.3, 0.01], color: [0.7, 0.7, 0.7], contact: 1 }
+wallobjC_east(floor): { pose: [-0.163248, -2.67352, 0.15], shape: ssBox, size: [0.15, 0.8, 0.3, 0.01], color: [0.7, 0.7, 0.7], contact: 1 }
+goalA(floor): { pose: [1.84814, 2.91986, 0], shape: ssBox, size: [0.5, 0.5, 0.1, 0.01], color: [1, 0.3, 0.3], logical: { is_goal: True, is_place: True } }
+wallgoalA_north(floor): { pose: [1.84814, 3.21986, 0.15], shape: ssBox, size: [0.8, 0.15, 0.3, 0.01], color: [0.7, 0.7, 0.7], contact: 1 }
+goalB(floor): { pose: [-2.82893, -1.86459, 0], shape: ssBox, size: [0.5, 0.5, 0.1, 0.01], color: [1, 0.3, 0.3], logical: { is_goal: True, is_place: True } }
+wallgoalB_north(floor): { pose: [-2.82893, -1.56459, 0.15], shape: ssBox, size: [0.8, 0.15, 0.3, 0.01], color: [0.7, 0.7, 0.7], contact: 1 }
+goalC(floor): { pose: [3.15661, 1.14882, 0], shape: ssBox, size: [0.32, 0.32, 0.1, 0.01], color: [1, 0.3, 0.3], logical: { is_goal: True, is_place: True, busy: True } }
 wallobjC(goalC): { pose: [0, 0, 0.2], joint: rigid, shape: ssBox, size: [0.3, 0.3, 0.3, 0.02], color: [0.7, 0.7, 0.7], contact: 1, logical: { is_object: True, is_obstacle: True, on_goal: True, busy: True, on: True } }

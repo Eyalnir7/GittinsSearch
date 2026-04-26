@@ -276,7 +276,7 @@ int main(int argn, char **argv) {
       // C.write(ConfFile);
       // C.view(true); 
       // return 0;
-
+ 
   parseCommandLineArguments(argn, argv, config);
   
   cout << "[DEBUG] Raw parameters read from command line:" << endl;
@@ -300,7 +300,7 @@ int main(int argn, char **argv) {
   std::filesystem::create_directories((const char*)(config.dataPath + "configs/"));
   // return 0;
   if (config.single_config) {
-    singleConfigCollectData(config);
+    singleConfigCollectData(config); 
   } else { 
     randomConfigCollectData(config);
   } 

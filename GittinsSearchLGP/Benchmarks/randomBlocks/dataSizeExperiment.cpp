@@ -47,7 +47,7 @@ uint countObjectsInLgpFile(const str &lgpFile)
       break;
     }
   }
-  file.close();
+  file.close(); 
   return numObjects;
 }
 
@@ -130,7 +130,7 @@ void createConfigs(int numObjLowerBound, int numObjUpperBound,
     // Copy LGP file to config directory
     str tempLgpFile = STRING("../../problemGenerators/randomBlocks/temp_lgp_files/randomBlocks_temp" << i << ".lgp");
     str savedLgpFile = STRING(configDir << "lgp_" << i << ".lgp");
-    std::filesystem::copy_file((char*)tempLgpFile, (char*)savedLgpFile);
+    std::filesystem::copy_file((char*)tempLgpFile, (char*)savedLgpFile, std::filesystem::copy_options::overwrite_existing);
     
     // Record in config list
     configListFile << i << "," << numObjects << "," << totalGoals << "," 

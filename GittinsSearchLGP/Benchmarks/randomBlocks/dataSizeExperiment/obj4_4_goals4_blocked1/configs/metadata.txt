@@ -2,5 +2,5 @@ numObjLowerBound: 4
 numObjUpperBound: 4
 numGoalsUpperBound: 4
 numBlockedGoalsUpperBound: 1
-numIterations: 100
+numIterations: 20
 seed: 0

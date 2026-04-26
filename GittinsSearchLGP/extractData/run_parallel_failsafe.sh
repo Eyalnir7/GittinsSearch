@@ -90,8 +90,7 @@ fi
 
 # Configuration
 SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
-PROJECT_ROOT=".."
-BASE_DATA_PATH="${PROJECT_ROOT}/data/reproduce_randomBlocks_${NUM_OBJ}objects_${NUM_GOALS}goals_${MAX_BLOCKED_GOALS}blockedgoals"
+BASE_DATA_PATH="${PROJECT_ROOT}/GittinsSearchLGP/data/reproduce_randomBlocks_${NUM_OBJ}objects_${NUM_GOALS}goals_${MAX_BLOCKED_GOALS}blockedgoals"
 EXECUTABLE="${SCRIPT_DIR}/x.exe"
 LOG_DIR="${SCRIPT_DIR}/logs/"
 MAX_RETRIES=50  # Maximum number of restart attempts per agent
@@ -145,7 +144,7 @@ run_agent_with_restart() {
     while [ $retry_count -lt $MAX_RETRIES ]; do
         echo "[Agent $agent_id] Starting run (attempt $((retry_count+1))/$MAX_RETRIES) from config $start_config at $(date)"
         
-        # Run the agent (log only stderr)
+        # Run the agent with PROJECT_ROOT exported (log only stderr)
         $EXECUTABLE --agent_id "$agent_id" --start_config_id "$start_config" --dataPath "$BASE_DATA_PATH" --numObjLowerBound "$NUM_OBJ" --numObjUpperBound "$NUM_OBJ" --numGoalsUpperBound "$NUM_GOALS" --numBlockedGoalsUpperBound "$MAX_BLOCKED_GOALS" --num_plans 3 --num_seed_trials 5 --num_problems 70 --num_waypoints_tries 500\
             2> "${LOG_DIR}/log${NUM_OBJ}${NUM_GOALS}${MAX_BLOCKED_GOALS}_${agent_id}_retry${retry_count}.txt" > /dev/null
         

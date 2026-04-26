@@ -1,4 +1,0 @@
-Best average c_tot: 2.01955
-numWaypoints: 30
-numTaskPlans: 5
-beta: 0.99999

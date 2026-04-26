@@ -1,4 +1,0 @@
-fol: <../../fol/pnp-byTouch-multiGoal.fol>
-terminal: "(on_goal objectA) (on_goal objectB) "
-coll: [ego, wall_right, ego, wall_back, ego, wall_left, ego, wall_front, ego, wallobjA_east, ego, wallobjA_north, ego, wallobjB_north, ego, wallobjB_east, ego, wallgoalA_south, ego, wallgoalB_north, objectA, ego, objectA, wall_right, objectA, wall_back, objectA, wall_left, objectA, wall_front, objectA, wallobjA_east, objectA, wallobjA_north, objectA, wallobjB_north, objectA, wallobjB_east, objectA, wallgoalA_south, objectA, wallgoalB_north, objectB, ego, objectB, wall_right, objectB, wall_back, objectB, wall_left, objectB, wall_front, objectB, wallobjA_east, objectB, wallobjA_north, objectB, wallobjB_north, objectB, wallobjB_east, objectB, wallgoalA_south, objectB, wallgoalB_north]
-genericCollisions!

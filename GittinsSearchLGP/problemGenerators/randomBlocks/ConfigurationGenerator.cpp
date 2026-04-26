@@ -7,21 +7,32 @@
 #include <libgen.h>
 #include <Core/graph.h>
 #include <filesystem>
+#include <cstdlib>
 
 // Helper function to get the directory of this source file
 std::string getSourceDirectory() {
-  // Get absolute path by converting __FILE__ to absolute and getting parent directory
-  std::filesystem::path sourceFilePath = __FILE__;
+  // Use PROJECT_ROOT environment variable to construct the absolute path
+  // PROJECT_ROOT should point to the root of the project
+  const char* projectRoot = std::getenv("PROJECT_ROOT");
   
-  // Make it absolute by combining with current working directory if it's relative
-  if (!sourceFilePath.is_absolute()) {
-    sourceFilePath = std::filesystem::absolute(sourceFilePath);
-  } 
-    
-  // Normalize the path to remove any ".." or "." comp onents
-  sourceFilePath = std::filesystem::weakly_canonical(sourceFilePath);
+  if (projectRoot == nullptr) {
+    std::cerr << "[ERROR] PROJECT_ROOT environment variable is not set" << std::endl;
+    throw std::runtime_error("PROJECT_ROOT environment variable is not set");
+  }
   
-  return sourceFilePath.parent_path().string();
+  std::cerr << "[DEBUG] PROJECT_ROOT = " << projectRoot << std::endl;
+  
+  std::filesystem::path sourceDir = 
+      std::filesystem::path(projectRoot) / "GittinsSearchLGP" / "problemGenerators" / "randomBlocks";
+  
+  std::cerr << "[DEBUG] Looking for sourceDir at: " << sourceDir.string() << std::endl;
+  
+  if (!std::filesystem::exists(sourceDir)) {
+    std::cerr << "[ERROR] Directory does not exist: " << sourceDir.string() << std::endl;
+    throw std::runtime_error("problemGenerators/randomBlocks directory not found at: " + sourceDir.string());
+  }
+  
+  return sourceDir.string();
 }   
  
 rai::Configuration getRandomConfiguration(int id, int numObjects, int numGoals, int numBlockedGoals, bool movableWalls)

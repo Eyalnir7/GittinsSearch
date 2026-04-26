@@ -139,12 +139,12 @@ bool solveRRTSegments(
       cout << "RRT for segment " << t << " completed." << endl;
       double time_rrt = rrt_node->c;
       times_rrts(t).append(time_rrt);
-      if (!rrt_node->isFeasible)
+      if (!rrt_node->isFeasible) 
       {
         cout << "RRT for segment " << t << " not feasible" << endl;
         feasibilities_rrts(t).append(0);
         all_rrt_feasible = false;
-        break;
+        break;  
       }
       else {
         cout << "RRT for segment " << t << " feasible" << endl;
